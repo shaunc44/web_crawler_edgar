@@ -15,7 +15,7 @@ info_tables = dom.getElementsByTagName('infoTable')
 # print ("Root =", root)
 
 
-# output = open('holdings.txt', 'a')
+output = open('holdings.txt', 'a')
 
 
 for item in info_tables:
@@ -24,11 +24,13 @@ for item in info_tables:
 	# print (value.firstChild.nodeValue)
 	# print ("Value =", value)
 	# print ("Name =", name)
+	shares_node = item.getElementsByTagName('shrsOrPrnAmt')[0]
+	shares = shares_node.getElementsByTagName('sshPrnamt')[0].firstChild.nodeValue
 
 	# name = info_table.find('nameOfIssuer').text
 	# value = info_table.find('value').text
 	# shares = info_table[4][0].text
+	output.write('%s\t%s\t%s\n' % (name, value, shares))
 
-# 	output.write('%s\t%s\t%s\n' % (name, value, shares))
 
-# output.close()
+output.close()
