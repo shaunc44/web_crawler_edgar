@@ -1,23 +1,16 @@
-# import xml.etree.ElementTree as et
-# import urllib.request
-# import sys
-
 from xml.dom import minidom
 import urllib.request as ur
 
 
-url = 'https://www.sec.gov/Archives/edgar/data/1179392/000091957417004235/infotable.xml'
+url = 'https://www.sec.gov/Archives/edgar/data/1062589/000090266417001168/infotable.xml'
 dom = minidom.parse(ur.urlopen(url))
-# print ("Dom =", dom)
-
-
 info_tables = dom.getElementsByTagName('infoTable')
-# print ("Root =", root)
 
 
 #Insert name of hedge fund where holdings file is
 output = open('holdings.txt', 'w')
 output.write('%s\t%s\t%s\t%s\n' % ('CompanyName', 'Value(1000s)', 'Shares', 'OrderType'))
+
 
 for item in info_tables:
 	name = item.getElementsByTagName('nameOfIssuer')[0].firstChild.nodeValue
