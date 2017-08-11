@@ -1,26 +1,21 @@
-# from __future__ import absolute_import
-# from scrapy.spider import BaseSpider
-# from scrapy.http import FormRequest, Request
-# from scrapy.utils.response import open_in_browser
-# from scrapy.selector import HtmlXPathSelector
-# from loginform import fill_login_form
 import scrapy
-
+from scrapy.utils.response import open_in_browser
 
 # class SearchEdgar(BaseSpider):
 class SearchEdgar(scrapy.Spider):
 
-	name = 'edgar'
-	start_url = ['https://www.sec.gov/edgar/searchedgar/companysearch.html']
+	name = 'edgar_search'
+	start_urls = ['https://www.sec.gov/edgar/searchedgar/companysearch.html']
 
 	def parse(self, response):
 		return scrapy.FormRequest.from_response(
 			response,
-			formname='companySearchForm',
-			formid='fast-search',
-			formdata={'cik': '1166559'},
-			callback=self.after,
-			method='GET'
+			formid =		'fast-search',
+			formdata =		{'CIK': '0001166559'},
+			formnumber =	4,
+			clickdata =		{'name': 'Find'},
+			callback =		self.after,
+			method =		'GET'
 		)
 
 	def after(self, response):
@@ -30,5 +25,4 @@ class SearchEdgar(scrapy.Spider):
 		# if "authentication failed" in response.body:
 		# 	self.logger.error("Login failed")
 		# 	return
-
 		open_in_browser(response)
