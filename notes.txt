@@ -1,0 +1,7 @@
+STATUS =  200
+
+Type of response =  <class 'scrapy.http.response.html.HtmlResponse'>
+
+Response =  <200 https://www.sec.gov/cgi-bin/browse-edgar?owner=exclude&action=getcompany&Find=Search&CIK=0001166559>
+
+URL =  https://www.sec.gov/cgi-bin/browse-edgar?owner=exclude&action=getcompany&Find=Search&CIK=0001166559
