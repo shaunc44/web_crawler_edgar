@@ -25,25 +25,38 @@ class SearchEdgar(scrapy.Spider):
 
 	def after_search(self, response):
 		# yield scrapy.Request(response)
-		print ("STATUS = ", response.status)
-		print ("Type of response = ", type(response))
-		print ("Response = ", response)
-		print ("URL = ", response.url)
+		# print ("STATUS = ", response.status)
+		# print ("Type of response = ", type(response))
+		# print ("Response = ", response)
+		# print ("URL = ", response.url)
+
+		# next_page_selector = '.tableFile2 tbody tr td a ::attr(href)'
+		# next_page_selector = 'td a ::attr(href)'
+		# next_page_selector = '<td nowrap="nowrap">13F-HR</td> a ::attr(href)'
+		# next_page = response.css(next_page_selector).extract_first()
+
+		next_page_selector = '//td[text()="13F-HR"]/following-sibling::td/a/@href'
+		next_page = response.xpath(next_page_selector).extract_first()
+
+		print ("Next Page = ", next_page)
+		print ("Next Page TYPE = ", type(next_page))
 
 		# if "authentication failed" in response.body:
 		# 	self.logger.error("Login failed")
 		# 	return
-		# open_in_browser(response)
+		# open_in_browser(next_page)
 
 		#from_response() ????
-		link = LinkExtractor(
-			response1,
-			callback =		self.after_click1,
-			follow =		True
-		)
+		# link = LinkExtractor(
+		# 	# response,
+		# 	# allow =				(),
+		# 	restrict_css =		'.tableFile2 .blueRow td="13F-HR" a ::attr(href)'
+		# 	# callback =			self.after_click1,
+		# 	# follow =			True
+		# )
 
-		print ("Link = ", link)
+		# print ("Link = ", link)
 
 
-	def after_click1(self, response1):
-		pass
+	# def after_click1(self, response1):
+	# 	pass
