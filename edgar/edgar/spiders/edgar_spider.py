@@ -34,17 +34,22 @@ class SearchEdgar(scrapy.Spider):
 		# next_page_selector = 'td a ::attr(href)'
 		# next_page_selector = '<td nowrap="nowrap">13F-HR</td> a ::attr(href)'
 		# next_page = response.css(next_page_selector).extract_first()
-
 		next_page_selector = '//td[text()="13F-HR"]/following-sibling::td/a/@href'
 		next_page = response.xpath(next_page_selector).extract_first()
 
 		print ("Next Page = ", next_page)
 		print ("Next Page TYPE = ", type(next_page))
 
+		return scrapy.Request(
+			response.urljoin(next_page),
+			callback=self.after_click
+		)
+
 		# if "authentication failed" in response.body:
 		# 	self.logger.error("Login failed")
 		# 	return
 		# open_in_browser(next_page)
+		# response.urljoin(next_page)
 
 		#from_response() ????
 		# link = LinkExtractor(
@@ -58,5 +63,22 @@ class SearchEdgar(scrapy.Spider):
 		# print ("Link = ", link)
 
 
-	# def after_click1(self, response1):
-	# 	pass
+	def after_click(self, response1):
+		# last_page_selector = '//td[text()="2"]/following-sibling::td/following-sibling::td/a/@href'
+		last_page_selector = '//td[text()="2"]/following-sibling::td/following-sibling::td/a[not(contains(@href, "xsl"))]'
+		last_page = response1.xpath(last_page_selector).extract_first()
+
+		print ("Last Page = ", last_page)
+		print ("Last Page TYPE = ", type(last_page))
+
+
+
+
+
+
+
+
+
+
+
+
