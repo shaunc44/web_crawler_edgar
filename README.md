@@ -6,12 +6,12 @@
 * This crawler parses fund holdings from Edgar, which are reported 
 in quarterly-filed 13F documents.  
 
-* *To retrieve fund holdings you must enter a valid CIK;*
-not all CIKs return 13Fs.  
-
 * 13F documents are filed by Private Trusts, Banks, Insurance
 Companies, Investment Advisors, Institutional Managers and
 Hedge Funds, but _**not**_ Mutual Funds.
+
+* *To retrieve fund holdings you must enter a valid CIK;*
+not all CIKs return 13Fs.  
 
 * To procure the CIK of a mutual fund you will need to 
 ascertain the name of the institutional manager of that 
@@ -24,6 +24,7 @@ parse the holdings for the Sequoia Fund.
 
 * If you need help searching for valid CIKs this website helps:  
 https://www.sec.gov/edgar/searchedgar/cik.htm  
+Then make sure that your fund files 13Fs.  
 
 * Here are some valid CIKs to test:  
 
@@ -47,9 +48,11 @@ Python libraries installed.
 
 ### Instructions  
 1. Open your terminal.  
-2. Navigate to the crawler directory : `$ cd shaun_cox_edgar_crawler/edgar`  
-3. Run the scraper: `$ scrapy crawl edgar_search -a cik=XXXXXXXXXX`  
-  a. XXXXXXXXXX will be the valid CIK that you've chosen  
+2. Navigate to the crawler directory :  
+`$ cd shaun_cox_edgar_crawler/edgar`  
+3. Run the scraper:  
+`$ scrapy crawl edgar_search -a cik=xxxxxxxxxx`  
+  a. xxxxxxxxxx will be the valid CIK that you've chosen  
 
 ---
 
