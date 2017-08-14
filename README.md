@@ -25,10 +25,10 @@ parse the holdings for the Sequoia Fund.
 * If you need help searching for valid CIKs this website helps:  
 https://www.sec.gov/edgar/searchedgar/cik.htm  
 
-* Valid CIKs to test below:  
+* Here are some valid CIKs to test:  
 
-| Fund     | CIK   |
-| ------------------------ | ------------------- |
+| Fund                      | CIK        |
+| ------------------------  | ---------- |
 | BlackRock Fund Advisors   | 0001006249 |
 | Bridgewater Associates    | 0001350694 |
 | Renaissance Technologies  | 0001037389 |
