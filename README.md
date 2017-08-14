@@ -27,7 +27,7 @@ https://www.sec.gov/edgar/searchedgar/cik.htm
 
 * Valid CIKs to test below:  
 |Fund                      |CIK                  |  
-|:-------------------------|:-------------------:|  
+|:------------------------:|:-------------------:|  
 |BlackRock Fund Advisors   |0001006249           |  
 |Bridgewater Associates    |0001350694           |  
 |Renaissance Technologies  |0001037389           |  
