@@ -1,3 +1,4 @@
+import view
 import scrapy
 from scrapy.utils.response import open_in_browser
 from scrapy.linkextractors import LinkExtractor
@@ -12,8 +13,9 @@ class SearchEdgar(scrapy.Spider):
 
 
 	def get_cik(self):
-		cik = '0001037389'
-		return cik
+		return self.view.get_cik()
+		# cik = '0001037389'
+		# return cik
 
 
 	#This could be removed and the replace url above with:
