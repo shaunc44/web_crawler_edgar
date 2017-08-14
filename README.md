@@ -26,12 +26,12 @@ parse the holdings for the Sequoia Fund.
 https://www.sec.gov/edgar/searchedgar/cik.htm  
 
 * Valid CIKs to test below:  
-|Fund                      |CIK                  |
-|:-------------------------|:-------------------:|
-|BlackRock Fund Advisors   |0001006249           |
-|Bridgewater Associates    |0001350694           |
-|Renaissance Technologies  |0001037389           |
-|Ruane, Cunniff & Goldfarb |0000728014           |
+|Fund                      |CIK                  |  
+|:-------------------------|:-------------------:|  
+|BlackRock Fund Advisors   |0001006249           |  
+|Bridgewater Associates    |0001350694           |  
+|Renaissance Technologies  |0001037389           |  
+|Ruane, Cunniff & Goldfarb |0000728014           |  
 
 ---
 
@@ -46,7 +46,7 @@ Python libraries installed.
 
 ### Instructions  
 1. Open your terminal.  
-2. Navigate to the crawlers directory : `$ cd shaun_cox_edgar_crawler/edgar`  
+2. Navigate to the crawler directory : `$ cd shaun_cox_edgar_crawler/edgar`  
 3. Run the scraper: `$ scrapy crawl edgar_search -a cik=XXXXXXXXXX`  
   a. XXXXXXXXXX will be the valid CIK that you've chosen  
 
