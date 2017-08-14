@@ -1,4 +1,3 @@
----
 ## Welcome to the SEC.gov EDGAR Crawler!  
 ---
 
@@ -8,11 +7,11 @@
 in quarterly-filed 13F documents.  
 
 * *To retrieve fund holdings you must enter a valid CIK;*
-not all CIKs return 13Fs  
+not all CIKs return 13Fs.  
 
 * 13F documents are filed by Private Trusts, Banks, Insurance
 Companies, Investment Advisors, Institutional Managers and
-Hedge Funds, but *not* Mutual Funds.
+Hedge Funds, but _**not**_ Mutual Funds.
 
 * To procure the CIK of a mutual fund you will need to 
 ascertain the name of the institutional manager of that 
@@ -26,4 +25,33 @@ parse the holdings for the Sequoia Fund.
 * If you need help searching for valid CIKs this website helps:  
 https://www.sec.gov/edgar/searchedgar/cik.htm  
 
+* Valid CIKs to test below:  
+|Fund                      |CIK                  |
+|--------------------------|---------------------|
+|BlackRock Fund Advisors   |0001006249           |
+|Bridgewater Associates    |0001350694           |
+|Renaissance Technologies  |0001037389           |
+|Ruane, Cunniff & Goldfarb |0000728014           |
+
 ---
+
+### Installation  
+1. Download the .zip file that was emailed to you. Email me at 
+shauncox44@gmail.com if you need the file.  
+2. Open the .zip file.  
+3. Make sure that you have the `scrapy`, `minidom` and `urllib.request`
+Python libraries installed.  
+
+---
+
+### Instructions  
+1. Open your terminal.  
+2. Navigate to the crawlers directory : `$ cd shaun_cox_edgar_crawler/edgar`  
+3. Run the scraper: `$ scrapy crawl edgar_search -a cik=XXXXXXXXXX`  
+  a. XXXXXXXXXX will be the valid CIK that you've chosen  
+
+---
+
+### Support  
+If you have issues running the crawler please email Shaun at 
+shauncox44@gmail.com  
