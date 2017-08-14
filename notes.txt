@@ -8,8 +8,8 @@ URL =  https://www.sec.gov/cgi-bin/browse-edgar?owner=exclude&action=getcompany&
 
 execution error: "file:///var/folders/6c/ys2t7zfj77j_b5lc_ww4b90m0000gn/T/tmpnyj0oijo.html" doesn’t understand the “open location” message. (-1708)
 
-https://www.sec.gov/Archives/edgar/data/1166559/000110465917032812/a17-12928_1informationtable.xml
-
+Not Target URL:
 https://www.sec.gov/Archives/edgar/data/1166559/000110465917032812/xslForm13F_X01/a17-12928_1informationtable.xml
 
+Target URL:
 https://www.sec.gov/Archives/edgar/data/1166559/000110465917032812/a17-12928_1informationtable.xml
