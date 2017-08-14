@@ -1,4 +1,4 @@
-## Welcome to the SEC.gov EDGAR Crawler!  
+# Welcome to the SEC.gov EDGAR Crawler!  
 ---
 
 ### Background  
