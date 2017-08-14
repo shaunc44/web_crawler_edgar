@@ -2,3 +2,6 @@ __pycache__/
 
 .Python
 venv/
+
+.DS_Store
+edgar/.DS_Store

@@ -10,14 +10,21 @@ class SearchEdgar(scrapy.Spider):
 	name = 'edgar_search'
 	start_urls = ['https://www.sec.gov/edgar/searchedgar/companysearch.html']
 
+
+	def get_cik(self):
+		cik = '0001037389'
+		return cik
+
+
 	#This could be removed and the replace url above with:
 	#URL =  https://www.sec.gov/cgi-bin/browse-edgar?owner=exclude&action=getcompany&Find=Search&CIK=0001166559
 	#and insert the cik code as a variable
 	def parse(self, response):
+		cik = self.get_cik()
 		return scrapy.FormRequest.from_response(
 			response,
 			formid =		'fast-search',
-			formdata =		{'CIK': '0001350694'},
+			formdata =		{'CIK': cik},
 			formnumber =	4,
 			clickdata =		{'name': 'Find'},
 			callback =		self.after_search,
@@ -60,9 +67,10 @@ class SearchEdgar(scrapy.Spider):
 		dom = minidom.parse(ur.urlopen(xml_url))
 		info_tables = dom.getElementsByTagName('infoTable')
 
+		file_name = self.get_cik()
 
 		#Insert name of hedge fund where holdings file is
-		output = open('holdings.txt', 'w')
+		output = open('%s.txt' % file_name, 'w')
 		output.write('%s\t%s\t%s\t%s\n' % ('CompanyName', 'Value(1000s)', 'Shares', 'OrderType'))
 
 
