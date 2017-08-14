@@ -14,17 +14,17 @@ Hedge Funds, but _**not**_ Mutual Funds.
 not all CIKs return 13Fs.  
 
 * To procure the CIK of a mutual fund you will need to 
-ascertain the name of the institutional manager of that 
+ascertain the name of the institutional manager for that 
 mutual fund.  
 
-* For example, Sequoia Fund is a mutual fund, but they do not file a 13F. 
-However, Sequoia's institutional manager, "Ruane, Cunniff & Goldfarb Inc", 
-does file a 13F. Therefore using Ruane Cunniff's CIK you can accurately 
-parse the holdings for the Sequoia Fund.  
+* For example, Sequoia Fund is a mutual fund, but they do not file 
+a 13F. However, Sequoia's institutional manager, "Ruane, Cunniff & 
+Goldfarb Inc", does file a 13F. Therefore, by using Ruane Cunniff's 
+CIK you can successfully locate Sequoia's 13F and parse its holdings.  
 
 * If you need help searching for valid CIKs this website helps:  
 https://www.sec.gov/edgar/searchedgar/cik.htm  
-Then make sure that your fund files 13Fs.  
+Then review the filings to make sure that the fund files 13Fs.  
 
 * Here are some valid CIKs to test:  
 
