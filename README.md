@@ -53,9 +53,10 @@ Python libraries installed.
 3. Run the scraper:  
 `$ scrapy crawl edgar_search -a cik=xxxxxxxxxx`  
   a. xxxxxxxxxx will be the valid CIK that you've chosen  
-4. The output file will save in the `shaun_cox_edgar_crawler/edgar` directory.  
+4. Wait about 5 seconds for the crawler to run.  
+5. The output file will save in the `shaun_cox_edgar_crawler/edgar` directory.  
   a. Example output file: `0001350694.txt`  
-5. Now, you can open the .txt file with Excel or the Python CSV module and 
+6. Now, you can open the .txt file with Excel or the Python CSV module and 
 view all of the holdings including shares and value per holding.  
 
 ---
