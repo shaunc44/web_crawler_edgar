@@ -20,7 +20,7 @@ mutual fund.
 * For example, Sequoia Fund is a mutual fund, but they do not file 
 a 13F. However, Sequoia's institutional manager, "Ruane, Cunniff & 
 Goldfarb Inc", does file a 13F. Therefore, by using Ruane Cunniff's 
-CIK you can successfully locate Sequoia's 13F and parse its holdings.  
+CIK you can successfully locate the 13F that reflects Sequoia's holdings.  
 
 * If you need help searching for valid CIKs this website helps:  
 https://www.sec.gov/edgar/searchedgar/cik.htm  
