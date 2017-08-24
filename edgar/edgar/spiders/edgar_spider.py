@@ -1,6 +1,9 @@
+# To crawl the SEC EDGAR website
 import scrapy
 from scrapy.utils.response import open_in_browser
 from scrapy.linkextractors import LinkExtractor
+
+# To parse the xml file
 from xml.dom import minidom
 import urllib.request as ur
 
