@@ -38,23 +38,20 @@ Then review the filings to make sure that the fund files 13Fs.
 ---
 
 ### Installation  
-1. Download the .zip file that was emailed to you. Email me at 
-shauncox44@gmail.com if you need the file.  
-2. Open the .zip file.  
-3. Make sure that you have the `scrapy`, `minidom` and `urllib.request`
-Python libraries installed.  
+1. Clone the repository from Github. 
+2. Make sure that you install the `Scrapy`, and `urllib3` packages with `pip install`.   
 
 ---
 
 ### Instructions  
 1. Open your terminal.  
 2. Navigate to the crawler directory :  
-`$ cd shaun_cox_edgar_crawler/edgar`  
+`$ cd web_crawler_edgar/edgar`  
 3. Run the scraper:  
 `$ scrapy crawl edgar_search -a cik=xxxxxxxxxx`  
   a. xxxxxxxxxx will be the valid CIK that you've chosen  
 4. Wait about 5 seconds for the crawler to run.  
-5. The output file will save in the `shaun_cox_edgar_crawler/edgar` directory.  
+5. The output file will save in the `web_crawler_edgar/edgar` directory.  
   a. Example output file: `0001350694.txt`  
 6. Now, you can open the .txt file with Excel or the Python CSV module and 
 view all of the holdings including shares and value per holding.  
@@ -62,5 +59,7 @@ view all of the holdings including shares and value per holding.
 ---
 
 ### Support  
-If you have issues running the crawler please email Shaun at 
-shauncox44@gmail.com  
+If you have issues running the crawler please email me at shauncox44 at gmail dot com  
+
+
+
